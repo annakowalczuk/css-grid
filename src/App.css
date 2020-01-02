@@ -13,29 +13,36 @@
   color: white;
 }
 
+/* IE Fallbacks */
 .grid__container {
-  display: grid;
-  width: 100%;
-  max-width: 900px;
-  margin: 20px auto;
-  grid-template-columns: 1fr 1fr minmax(150px, 1fr) 1fr;
-  grid-template-rows: auto;
-  grid-gap: 10px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.grid__container > * {
+  margin: 10px;
+}
+
+@supports( display: grid ) {
+
+  .grid__container {
+    display: grid;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+
+  .grid__container > * {
+    margin: unset;
+  }
+
 }
 
 .grid__item {
   background-color: aqua;
   min-height: 50px;
+  width: 100%;
 }
-
-/* .grid__item:nth-child(odd) {
-  grid-column: 1 / 2;
-}
-
-.grid__item:nth-child(even) {
-  grid-column: 2 / 3;
-}
-
-.grid__item:nth-child(5) {
-  grid-column: 1 / 3;
-} */
