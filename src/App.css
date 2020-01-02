@@ -15,30 +15,27 @@
 
 .grid__container {
   display: grid;
-  width: 1200px;
+  width: 100%;
+  max-width: 900px;
   margin: 20px auto;
-  grid-template-columns:
-    [body_start]
-    150px
-    [column_middle]
-    150px
-    [body_end];
-  grid-template-rows: 50px 100px 50px;
+  grid-template-columns: 1fr 1fr minmax(150px, 1fr) 1fr;
+  grid-template-rows: auto;
   grid-gap: 10px;
 }
 
 .grid__item {
   background-color: aqua;
+  min-height: 50px;
 }
 
-.grid__item:nth-child(odd) {
-  grid-column: body_start / column_middle;
+/* .grid__item:nth-child(odd) {
+  grid-column: 1 / 2;
 }
 
 .grid__item:nth-child(even) {
-  grid-column: column_middle / body_end;
+  grid-column: 2 / 3;
 }
 
 .grid__item:nth-child(5) {
   grid-column: 1 / 3;
-}
+} */
