@@ -35,9 +35,14 @@
       width: 100%;
       max-width: 900px;
       margin: 20px auto;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       grid-template-rows: auto;
       grid-gap: 20px;
+    }
+
+    .grid__item:nth-child(3) {
+      background-color: green;
+      order: 5;
     }
   }
 
@@ -61,6 +66,12 @@
         5fr
         [page_end];
       grid-gap: 10px;
+    }
+
+    .grid__item:nth-child(3) {
+      background-color: green;
+      grid-column: body_start / container_end;
+      grid-row: 1 / 2;
     }
   }
 
