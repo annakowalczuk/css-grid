@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
@@ -9,7 +9,22 @@ function App() {
           CSS Grid based on Kirsty Burgoine presentation at Frontend Connect
         </p>
       </header>
-      <section>
+      <section className="explicit-grid">
+        <p>
+          Explicit Grid
+        </p>
+        <div className="grid__container">
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+        </div>
+      </section>
+      <section className="no-wrapper">
+        <p>
+          No .wrapper approach
+        </p>
         <div className="grid__container">
           <div className="grid__item"></div>
           <div className="grid__item"></div>
