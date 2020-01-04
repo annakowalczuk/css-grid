@@ -31,6 +31,16 @@ function App() {
           <div className="grid__item"></div>
           <div className="grid__item"></div>
           <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
         </div>
       </section>
     </div>

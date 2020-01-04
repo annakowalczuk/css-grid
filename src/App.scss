@@ -52,7 +52,14 @@
         [container_end]
         minmax(10px, 1fr)
         [body_end];
-      grid-template-rows: auto;
+      grid-template-rows:
+        [page_start]
+        1fr
+        [content_start]
+        repeat(3, 3fr)
+        [content_end]
+        5fr
+        [page_end];
       grid-gap: 10px;
     }
   }
